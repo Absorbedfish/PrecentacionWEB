@@ -1,0 +1,22 @@
+services:
+  # Servicio de Inteligencia Artificial
+  ia-service:
+    build: ./AIFlask
+    container_name: ia_container
+    restart: always
+    environment:
+      - TZ=America/Mexico_City
+      - TF_CPP_MIN_LOG_LEVEL=2  # Silencia las advertencias de CPU de TensorFlow
+    # No exponemos puertos al exterior, solo interno para el Bot y la Web
+
+  # Servicio de la Aplicación Web
+  web-app:
+    build: ./WEB
+    container_name: web_container
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      - TZ=America/Mexico_City
+    depends_on:
+      - ia-service

@@ -1,0 +1,86 @@
+{% extends './layout.html' %}
+
+{% block title %}Desarrollo de Videojuegos Backend{% endblock %}
+
+{% block content %}
+
+<div class="card-container">
+    {% if lang == "es" %}
+        
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/Unity.jpeg') }}" alt="Unity Logo">
+            <div class="card-content">
+                <h3>Unity</h3>
+                <br>
+                <p>Conocimientos en Unity para la construcción del proyecto base.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/CSharp.png') }}" alt="C# Logo">
+            <div class="card-content">
+                <h3>C#</h3>
+                <p>Conocimientos en C# para programar la lógica y los comportamientos de los juegos.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/GitHub.png') }}" alt="GitHub Logo">
+            <div class="card-content">
+                <h3>GitHub</h3>
+                <br>
+                <p>Uso de GitHub para llevar un buen control de versiones.</p>
+            </div>
+        </div>
+    {% elif lang == "ru" %}
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/Unity.jpeg') }}" alt="Unity Logo">
+            <div class="card-content">
+                <h3>Unity</h3>
+                <br>
+                <p>Знание Unity для создания базового проекта.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/CSharp.png') }}" alt="C# Logo">
+            <div class="card-content">
+                <h3>C#</h3>
+                <br>
+                <p>Знание C# для программирования логики и поведения игр.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/GitHub.png') }}" alt="GitHub Logo">
+            <div class="card-content">
+                <h3>GitHub</h3>
+                <br>
+                <p>Использование GitHub для контроля версий.</p>
+            </div>
+        </div>
+    {% else %}
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/Unity.jpeg') }}" alt="Unity Logo">
+            <div class="card-content">
+                <h3>Unity</h3>
+                <br>
+                <p>Knowledge of Unity for building the base project.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/CSharp.png') }}" alt="C# Logo">
+            <div class="card-content">
+                <h3>C#</h3>
+                <br>
+                <p>Proficiency in C# for programming game logic and behaviors.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/GitHub.png') }}" alt="GitHub Logo">
+            <div class="card-content">
+                <h3>GitHub</h3>
+                <br>
+                <p>Proficiency in using GitHub for version control.</p>
+            </div>
+        </div>
+    {% endif %}
+</div>
+
+{% endblock %}

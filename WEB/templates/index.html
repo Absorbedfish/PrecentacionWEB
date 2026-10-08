@@ -1,0 +1,165 @@
+{% extends './layout.html' %}
+
+{% block title %}Mi Presentación{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    {% if lang == "es" %}
+        <h1>Bienvenido a Mi Presentación Personal</h1>
+        <section id="sobre-mi" class="mb-4">
+            <h2>Sobre Mí</h2>
+            <p> 
+                Soy un apasionado del desarrollo web, la ciberseguridad y el soporte técnico. Disfruto creando sitios web y explorando vulnerabilidades para mejorar su seguridad. Me encantan los momentos serenos y las caminatas nocturnas.
+            </p>
+        </section>
+        
+        <section id="habilidades" class="mb-4">
+            <h2>Habilidades</h2>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Desarrollo web Fullstack</h3>
+                        <p>Creación y mantenimiento de aplicaciones web con tecnologías modernas.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Desarrollo de videojuegos Backend</h3>
+                        <br>
+                        <p>Implementación de lógica y servidores para juegos en línea.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Desarrollo de IA</h3>
+                        <br>
+                        <br>
+                        <p>Implementación de soluciones de inteligencia artificial.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Hacking ético</h3>
+                        <p>Evaluación de seguridad en sitios web e infraestructura para identificar y corregir vulnerabilidades.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Soporte técnico</h3>
+                        <p>Diagnóstico y reparación de impresoras, teléfonos, portátiles y PC's.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contacto" class="mb-4">
+            <h2>Contacto</h2>
+            <p><strong>Email:</strong> <a href="mailto:manuel138antonio@gmail.com">manuel138antonio@gmail.com</a></p>
+        </section>
+
+    {% elif lang == "ru" %}
+        <h1>Добро пожаловать в мое личное представление</h1>
+        <section id="sobre-mi" class="mb-4">
+            <h2>Обо мне</h2>
+            <p> 
+                Я увлечен веб-разработкой, кибербезопасностью и технической поддержкой. Мне нравится создавать веб-сайты и исследовать уязвимости для улучшения их безопасности. Я люблю спокойные моменты и вечерние прогулки.
+            </p>
+        </section>
+        
+        <section id="habilidades" class="mb-4">
+            <h2>Навыки</h2>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Fullstack веб-разработка</h3>
+                        <p>Создание и поддержка веб-приложений с использованием современных технологий.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Разработка бэкенда для игр</h3>
+                        <br>
+                        <p>Реализация логики и серверов для онлайн-игр.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Разработка искусственного интеллекта</h3>
+                        <p>Реализация решений на основе искусственного интеллекта.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Этичный хакинг</h3>
+                        <p>Оценка безопасности веб-сайтов и инфраструктуры для выявления и устранения уязвимостей.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Техническая поддержка</h3>
+                        <p>Диагностика и ремонт принтеров, телефонов, ноутбуков и ПК.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contacto" class="mb-4">
+            <h2>Контакт</h2>
+            <p><strong>Email:</strong> <a href="mailto:manuel138antonio@gmail.com">manuel138antonio@gmail.com</a></p>
+        </section>
+
+    {% else %}
+        <h1>Welcome to My Personal Introduction</h1>
+        <section id="sobre-mi" class="mb-4">
+            <h2>About Me</h2>
+            <p> 
+                I'm passionate about web development, cybersecurity, and technical support. I enjoy building websites and identifying vulnerabilities to improve their security. I love quiet moments and evening walks.
+            </p>
+        </section>
+        
+        <section id="habilidades" class="mb-4">
+            <h2>Skills</h2>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Fullstack Web Development</h3>
+                        <p>Creation and maintenance of web applications with modern technologies.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Game Backend Development</h3>
+                        <br>
+                        <p>Implementation of logic and servers for online games.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Artificial Intelligence Development</h3>
+                        <br>
+                        <p>Implementation of artificial intelligence solutions.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Ethical Hacking</h3>
+                        <p>Security evaluation of websites and infrastructure to identify and fix vulnerabilities.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Technical Support</h3>
+                        <br>
+                        <p>Diagnosis and repair of printers, phones, laptops and desktops.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contacto" class="mb-4">
+            <h2>Contact</h2>
+            <p><strong>Email:</strong> <a href="mailto:manuel138antonio@gmail.com">manuel138antonio@gmail.com</a></p>
+        </section>
+    {% endif %}
+</div>
+{% endblock %}

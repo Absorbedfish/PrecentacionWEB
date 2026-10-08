@@ -1,0 +1,98 @@
+{% extends './layout.html' %}
+
+{% block title %}Soporte tecnico{% endblock %}
+
+{% block content %}
+
+<div class="card-container">
+    {% if lang == "es" %}
+        <div class="card" id="tarjeta-1">
+            <img src="{{ url_for('static', filename='img/celular.jpg') }}">
+            <div class="card-content">
+                <h3>Telefonos</h3>
+                <p>
+                    Mantenimiento como limpieza de centro de carga, centro de audifonos, remplazo de piezas como pantallas, 
+                    microfonos, baterias, camaras, botones etc y formateos.
+                </p>
+            </div>
+        </div>
+        <div class="card" id="tarjeta-2">
+            <img src="{{ url_for('static', filename='img/PC.jpg') }}">
+            <div class="card-content">
+                <h3>PC</h3>
+                <br>
+                <p>Formateos e instalacion de sistema operativo, matenimiento de limpieza recuperacion de archivos perdidos</p>
+                <br>
+            </div>
+        </div>
+        <div class="card" id="tarjeta-3">
+            <img src="{{ url_for('static', filename='img/Laptop.jpg') }}" alt="Descripción de la imagen">
+            <div class="card-content">
+                <h3>Laptops</h3>
+                <br>
+                <p>Mantenimiento de limpieza, formateos e instalacion de sistemas operativos, remplazo de piezas dañadas</p>
+            </div>
+        </div>
+    {% elif lang == "ru" %}
+        <div class="card" id="tarjeta-1">
+            <img src="{{ url_for('static', filename='img/celular.jpg') }}">
+            <div class="card-content">
+                <h3>Телефоны</h3>
+                <br>
+                <p>
+                    Обслуживание, такое как очистка зарядного порта, разъема для наушников, замена деталей, таких как экраны, 
+                    микрофоны, батареи, камеры, кнопки и т. д., а также форматирование.
+                </p>
+            </div>
+        </div>
+        <div class="card" id="tarjeta-2">
+            <img src="{{ url_for('static', filename='img/PC.jpg') }}">
+            <div class="card-content">
+                <h3>ПК</h3>
+                <br>
+                <p>Форматирование и установка операционной системы, обслуживание по очистке и восстановлению потерянных файлов</p>
+                <br>
+            </div>
+        </div>
+        <div class="card" id="tarjeta-3">
+            <img src="{{ url_for('static', filename='img/Laptop.jpg') }}" alt="Descripción de la imagen">
+            <div class="card-content">
+                <h3>Ноутбуки</h3>
+                <br>
+                <br>
+                <p>Обслуживание по очистке, форматированию и установке операционных систем, замене поврежденных деталей</p>
+                <br>
+            </div>
+        </div>
+    {% else %}
+        <div class="card" id="tarjeta-1">
+            <img src="{{ url_for('static', filename='img/celular.jpg') }}">
+            <div class="card-content">
+                <h3>Phones</h3>
+                <p>
+                    Maintenance such as cleaning of charging port, headphone jack, replacement of parts such as screens, 
+                    microphones, batteries, cameras, buttons etc and formatting.
+                </p>
+            </div>
+        </div>
+        <div class="card" id="tarjeta-2">
+            <img src="{{ url_for('static', filename='img/PC.jpg') }}">
+            <div class="card-content">
+                <h3>PC</h3>
+                <br>
+                <p>Formatting and installation of operating system, maintenance of cleaning recovery of lost files</p>
+                <br>
+            </div>
+        </div>
+        <div class="card" id="tarjeta-3">
+            <img src="{{ url_for('static', filename='img/Laptop.jpg') }}" alt="Descripción de la imagen">
+            <div class="card-content">
+                <h3>Laptops</h3>
+                <br>
+                <p>Maintenance of cleaning, formatting and installation of operating systems, replacement of damaged parts</p>
+            </div>
+        </div>
+    {% endif %}
+</div>
+    
+{% endblock %}

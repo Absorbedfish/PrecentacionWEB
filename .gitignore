@@ -1,0 +1,18 @@
+# Entornos virtuales de Python
+.venv/
+venv/
+env/
+
+# Caché de Python
+__pycache__/
+*.py[cod]
+
+# Imágenes subidas temporalmente en ejecución
+static/uploads/
+
+# IDEs y sistema operativo
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+.DS_Store

@@ -1,0 +1,177 @@
+{% extends './layout.html' %}
+
+{% block title %}Desarrollo web Fullstack{% endblock %}
+
+{% block content %}
+
+{% if lang == 'es' %}
+
+    <div class="card-container">
+        <div class="card" id="tarjeta-1">
+            <img src="{{ url_for('static', filename='img/html5.jpg') }}">
+            <div class="card-content">
+                <h3>HTML</h3>
+                <p>conociemntos de HTML 5 para la construccion de la estructura de la pagina web </p>
+            </div>
+        </div>
+        <div class="card" id="tarjeta-2">
+            <img src="{{ url_for('static', filename='img/CSS3.jpg') }}">
+            <div class="card-content">
+                <h3>CSS</h3>
+                <br>
+                <p>conociemntos de CSS3 para añdir estilos perzonalizados en la web</p>
+            </div>
+        </div>
+        <div class="card" id="tarjeta-3">
+            <img src="{{ url_for('static', filename='img/JavaScript.jpg') }}" alt="Descripción de la imagen">
+            <div class="card-content">
+                <h3>JavaScript</h3>
+                <p>Utlilizacion de JavaScript para añadir cierta interactuabilidad con los usuarios</p>
+            </div>
+        </div>
+    </div>
+    <br> <br>
+    <div class="card-container">
+        <div class="card" id="tarjeta-1">
+            <img src="{{ url_for('static', filename='img/sql_and_mysql.jpg') }}">
+            <div class="card-content">
+                <h3>MySql/SQL</h3>
+                <p>conociemntos de MySQL y SQL, para la gestion de bases de datos, guardado seguro de contraseñas cifrdas, implementacion de funcionalidades CRUD</p>
+            </div>
+        </div>
+        <div class="card" id="tarjeta-2">
+            <img src="{{ url_for('static', filename='img/Flask.png') }}">
+            <div class="card-content">
+                <h3>Flask</h3>
+                <br>
+                <br>
+                <p>conociemntos de Flask para el desarrollo de aplicaciones web en Python</p>
+            </div>
+        </div>
+        <div class="card" id="tarjeta-3">
+            <img src="{{ url_for('static', filename='img/Bootstrap.png') }}" alt="Descripción de la imagen">
+            <div class="card-content">
+                <h3>Bootstrap</h3>
+                <br>
+                <br>
+                <p>Utlilizacion de Bootstrap para la creación de interfaces de usuario responsivas y atractivas</p>
+            </div>
+        </div>
+    </div>
+{% elif lang == "ru" %}
+    <div class="card-container">
+        <div class="card" id="tarjeta-1">
+            <img src="{{ url_for('static', filename='img/html5.jpg') }}">
+            <div class="card-content">
+                <h3>HTML</h3>
+                <br>
+                <br>
+                <p>знание HTML 5 для построения структуры веб-страницы</p>
+            </div>
+        </div>
+        <div class="card" id="tarjeta-2">
+            <img src="{{ url_for('static', filename='img/CSS3.jpg') }}">
+            <div class="card-content">
+                <h3>CSS</h3>
+                <br>
+                <p>знание CSS3 для добавления персонализированных стилей в веб</p>
+            </div>
+        </div>
+        <div class="card" id="tarjeta-3">
+            <img src="{{ url_for('static', filename='img/JavaScript.jpg') }}" alt="Descripción de la imagen">
+            <div class="card-content">
+                <h3>JavaScript</h3>
+                <p>Использование JavaScript для добавления некоторой интерактивности с пользователями</p>
+            </div>
+        </div>
+    </div>
+    <br> <br>
+    <div class="card-container">
+        <div class="card" id="tarjeta-1">
+            <img src="{{ url_for('static', filename='img/sql_and_mysql.jpg') }}">
+            <div class="card-content">
+                <h3>MySql/SQL</h3>
+                <p>знание MySQL и SQL, для управления базами данных, безопасного хранения зашифрованных паролей, реализации функциональности CRUD</p>
+            </div>
+        </div>
+        <div class="card" id="tarjeta-2">
+            <img src="{{ url_for('static', filename='img/Flask.png') }}">
+            <div class="card-content">
+                <h3>Flask</h3>
+                <br>
+                <br>
+                <br>
+                <br>
+                <p>знание Flask для разработки веб-приложений на Python</p>
+            </div>
+        </div>
+        <div class="card" id="tarjeta-3">
+            <img src="{{ url_for('static', filename='img/Bootstrap.png') }}" alt="Descripción de la imagen">
+            <div class="card-content">
+                <h3>Bootstrap</h3>
+                <br>
+                <br>
+                <p>Использование Bootstrap для создания адаптивных и привлекательных интерфейсов пользователей</p>
+            </div>
+        </div>
+    </div>
+{% else %}
+
+    <div class="card-container">
+        <div class="card" id="tarjeta-1">
+            <img src="{{ url_for('static', filename='img/html5.jpg') }}">
+            <div class="card-content">
+                <h3>HTML</h3>
+                <br>
+                <p>knowledge of HTML 5 for building the structure of the web page</p>
+            </div>
+        </div>
+        <div class="card" id="tarjeta-2">
+            <img src="{{ url_for('static', filename='img/CSS3.jpg') }}">
+            <div class="card-content">
+                <h3>CSS</h3>
+                <br>
+                <p>knowledge of CSS3 to add personalized styles to the web</p>
+            </div>
+        </div>
+        <div class="card" id="tarjeta-3">
+            <img src="{{ url_for('static', filename='img/JavaScript.jpg') }}" alt="Descripción de la imagen">
+            <div class="card-content">
+                <h3>JavaScript</h3>
+                <br>
+                <p>Use of JavaScript to add some interactivity with users</p>
+            </div>
+        </div>
+    </div>
+    <br> <br>
+    <div class="card-container">
+        <div class="card" id="tarjeta-1">
+            <img src="{{ url_for('static', filename='img/sql_and_mysql.jpg') }}">
+            <div class="card-content">
+                <h3>MySql/SQL</h3>
+                <p>knowledge of MySQL and SQL, for database management, secure storage of encrypted passwords, implementation of CRUD functionalities</p>
+            </div>
+        </div>
+        <div class="card" id="tarjeta-2">
+            <img src="{{ url_for('static', filename='img/Flask.png') }}">
+            <div class="card-content">
+                <h3>Flask</h3>
+                <br>
+                <br>
+                <br>
+                <p>knowledge of Flask for developing web applications in Python</p>
+            </div>
+        </div>
+        <div class="card" id="tarjeta-3">
+            <img src="{{ url_for('static', filename='img/Bootstrap.png') }}" alt="Descripción de la imagen">
+            <div class="card-content">
+                <h3>Bootstrap</h3>
+                <br>
+                <br>
+                <p>Using Bootstrap to Create Responsive and Attractive User Interfaces</p>
+            </div>
+        </div>
+    </div>
+{% endif %}
+    
+{% endblock %}

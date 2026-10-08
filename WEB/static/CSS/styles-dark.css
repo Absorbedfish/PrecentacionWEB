@@ -1,0 +1,207 @@
+/* Estilos generales en modo oscuro */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Fondo oscuro */
+    /*color: #fff; /* Texto claro */
+    margin: 0;
+    padding: 0;
+}
+
+.color {
+    background-color: #666666;
+}
+
+/* Contenedor principal */
+.container {
+    margin-left: 250px; /* Deja espacio para el menú lateral */
+    padding: 20px;
+}
+
+/* Barra lateral */
+.sidebar {
+    width: 230px;
+    height: 100vh;
+    background-color: #1e1e1e; /* Más oscuro que el fondo */
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar h2 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Botones del menú */
+.sidebar a {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: #292929; /* Botón más oscuro */
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.sidebar a:hover {
+    background-color: #444444; /* Efecto hover más claro */
+    transform: scale(1.05);
+}
+
+.sidebar a:active {
+    background-color: #666666;
+}
+
+/* Secciones */
+section {
+    background-color: #1e1e1e; /* Fondo oscuro */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+.mb-4 h2 {
+    color: #fff;
+}
+
+p {
+    color: #fff;
+}
+
+/* Ajuste de responsividad */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 10px;
+    }
+    .container {
+        margin-left: 0;
+    }
+}
+
+/* Tarjetas */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 300px;
+    background-color: #121212; /* Color oscuro para las tarjetas */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+    background-color: #121212;
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #bbbbbb;
+}
+
+/*Estilos para el menú desplegable de idiomas Boostrap*/
+.dropdown-menu {
+    background-color: #343a40;
+}
+
+.dropdown-item {
+    color: white;
+}
+
+.dropdown-item:hover {
+    background-color: #495057;
+}
+/* Ajuste para el header con idioma */
+header h1 {
+    font-size: 1.5rem; /* Tamaño más manejable */
+    margin: 0;
+    display: inline-block;
+}
+
+/* Hacer el botón de idioma más discreto */
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.85rem;
+}
+
+/* Asegurar que el menú desplegable no se salga de la pantalla a la derecha */
+.dropdown-menu-end {
+    right: 0;
+    left: auto;
+}
+
+/* Menú desplegable oscuro */
+.dropdown-menu {
+    background-color: #292929 !important; /* El mismo tono de tus botones laterales */
+    border: 1px solid #444 !important;    /* Un borde sutil para que no se pierda en el fondo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Los items del menú */
+.dropdown-item {
+    color: #ffffff !important;
+    padding: 8px 15px;
+    transition: background 0.2s;
+}
+
+/* Efecto al pasar el ratón por encima de las banderas */
+.dropdown-item:hover {
+    background-color: #444444 !important;
+    color: #ffffff !important;
+}
+
+/* Pequeño ajuste para que las banderas no se vean tan pegadas al texto */
+.dropdown-item span, .dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Para que el botón de idioma combine con el header oscuro */
+header .btn-outline-light {
+    border-color: #555;
+    color: #ccc;
+}
+
+header .btn-outline-light:hover, 
+header .btn-outline-light:focus, 
+header .show > .btn-outline-light {
+    background-color: #444 !important;
+    border-color: #777 !important;
+}

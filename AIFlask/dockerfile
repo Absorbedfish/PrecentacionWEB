@@ -1,0 +1,22 @@
+FROM python:3.12-slim
+WORKDIR /app
+
+# Instalamos dependencias de sistema necesarias para imágenes y modelos
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libhdf5-dev \
+    libjpeg-dev \
+    zlib1g-dev \
+    tzdata \
+    && rm -rf /var/lib/apt/lists/*
+
+ENV TZ=America/Mexico_City
+
+# Copiamos solo el requirements primero para aprovechar la cache de Docker
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+EXPOSE 8080
+CMD ["python", "app.py"]

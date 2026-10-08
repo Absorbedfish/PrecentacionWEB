@@ -1,0 +1,271 @@
+{%- extends './layout.html' -%}
+
+{%- block title -%}Proyectos de IA{%- endblock -%}
+
+{%- block content -%}
+{% if lang == "es" %}
+    <div class="container mt-4">
+        <section id="sobre-mi" class="mb-4">
+            <h2>Proyectos de Inteligencia Artificial</h2>
+            <p> 
+                A continuación se presentan algunos de mis proyectos relacionados con la inteligencia artificial:
+            </p>
+        </section>
+        
+        <section id="sobre-mi" class="mb-4">
+            <h2>Modelos de Clasificación de Imágenes</h2>
+            <p> 
+                He desarrollado tres modelos de clasificación de imágenes utilizando técnicas de aprendizaje automático y redes neuronales convolucionales (CNN) y Transfer Learning (MobileNetV2). Estos modelos son capaces de identificar y clasificar objetos en imágenes con alta precisión.
+            </p>
+            <list>
+                <li><p><b>Modelo 1:</b> Clasificación de Comida medinte la técnica de aprendizaje no supervisado, clasifica 3 categorías Hamburgesas, Pizza y Perro Caliente</p></li>
+                <li><p><b>Modelo 2:</b> Clasificación de Comida mediante la técnica de aprendizaje supervisado, clasifica 3 categorías Hamburgesas, Pizza y Perro Caliente</p></li>
+                <li><p><b>Modelo 3:</b> Clasificación de Animales mediante la técnica de aprendizaje supervisado, clasifica 2 categorías Babuinos y Jirafas</p></li>
+            </list>
+            <br>
+            <p>
+                Estos modelos han sido entrenado mediante tecnicas de aprendizaje supervisado y no supervisado, que consiste en entrenar un modelo con datos etiquetados (supervisado) o sin etiquetas (no supervisado) para que el modelo aprenda a identificar patrones y realizar predicciones.
+            <p>
+                Los primeros 2 modelos han usado la técnica de Transfer Learning con MobileNetV2, lo que les ha permitido alcanzar una alta precisión con un tiempo de entrenamiento reducido. El tercer modelo se entrenó desde cero utilizando una arquitectura CNN personalizada lo que provoca un rendimiento más limitado y menos efectivo.
+            </p>
+            <p>Puedes provar estos modelos en vivo subiendo una imagen de cualquier comida o animal.</p>
+        </section>
+        <section class="mb-4">
+            <div class="card-container">
+                <div class="card" id="tarjeta-1">
+                    <img id="preview1" src="#" alt="Tu imagen" style="max-width: 300px; border-radius: 10px;" class="mb-3">
+                    <div class="card-content">
+                        <h3>Modelo 1: Clasificación de Comida Aprendizaje No Supervisado</h3>
+                        <p>Acontinuación Carga una imagen de comida para clasificarla (Hamburgesas, Pizza, Perro Caliente):</p>
+                        <br>
+                        <form id="upload-form" enctype="multipart/form-data">
+                            <br>
+                            <div class="mb-3">
+                                <input class="form-control" type="file" id="imageInputComida" name="file" accept="image/*">
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="clasificarImagnes()">Clasificar Imagen</button>
+                        </form>
+                        <div id="resultado-ia1" class="mt-4 text-center" style="display:none;">
+                            <h4 id="prediction-text1" class="text-success"></h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" id="tarjeta-2">
+                    <img id="preview2" src="#" alt="Tu imagen" style="max-width: 300px; border-radius: 10px;" class="mb-3">
+                    <div class="card-content">
+                        <h3>Modelo 2: Clasificación de Comida Aprendizaje Supervisado</h3>
+                        <p>Acontinuación Carga una imagen de comida para clasificarla (Hamburgesas, Pizza, Perro Caliente):</p>
+                        <br>
+                        <form id="upload-form" enctype="multipart/form-data">
+                            <br>
+                            <div class="mb-3">
+                                <input class="form-control" type="file" id="imageInputComida2" name="file" accept="image/*">
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="clasificarImagnes()">Clasificar Imagen</button>
+                        </form>
+                        <div id="resultado-ia2" class="mt-4 text-center" style="display:none;">
+                            <h4 id="prediction-text2" class="text-success"></h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" id="tarjeta-3">
+                    <img id="preview3" src="#" alt="Tu imagen" style="max-width: 300px; border-radius: 10px;" class="mb-3">
+                    <div class="card-content">
+                        <h3>Modelo 3: Clasificación de Animales CNN Aprendizaje Supervisado</h3>
+                        <p>Acontinuación Carga una imagen de animal para clasificarla (Babuinos o Jirafas):</p>
+                        <br>
+                        <form id="upload-form" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <input class="form-control" type="file" id="imageInputAnimales" name="file" accept="image/*">
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="clasificarImagnes()">Clasificar Imagen</button>
+                        </form>
+                        <div id="resultado-ia3" class="mt-4 text-center" style="display:none;">
+                            <h4 id="prediction-text3" class="text-success"></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% elif lang == "ru" %}
+    <div class="container mt-4">
+        <section id="sobre-mi" class="mb-4">
+            <h2>Проекты в области искусственного интеллекта</h2>
+            <p> 
+                Ниже представлены некоторые из моих проектов, связанных с искусственным интеллектом:
+            </p>
+        </section>
+        
+        <section id="sobre-mi" class="mb-4">
+            <h2>Модели классификации изображений</h2>
+            <p> 
+                Я разработал три модели классификации изображений, используя техники машинного обучения и сверточные нейронные сети (CNN) и Transfer Learning (MobileNetV2). Эти модели способны идентифицировать и классифицировать объекты на изображениях с высокой точностью.
+            </p>
+            <list>
+                <li><p><b>Модель 1:</b> Классификация блюд с помощью метода неконтролируемого обучения: выделяется три категории: гамбургеры, пицца и хот-доги</p></li>
+                <li><p><b>Модель 2:</b> Классификация еды с помощью метода контролируемого обучения: выделяется три категории: гамбургеры, пицца и хот-доги</p></li>
+                <li><p><b>Модель 3:</b> Классификация животных с помощью метода контролируемого обучения: выделяется две категории: обезьяны и жирафы</p></li>
+            </list>
+            <br>
+            <p>
+                Эти модели были обучены с помощью методов контролируемого и неконтролируемого обучения, которые заключаются в обучении модели на основе данных с метками (контролируемое обучение) или без меток (неконтролируемое обучение), чтобы модель научилась распознавать закономерности и делать прогнозы.
+            </p>
+
+            <p>
+                В первых двух моделях использовалась техника переноса обучения с MobileNetV2, что позволило достичь высокой точности при сокращенном времени обучения. Третья модель была обучена с нуля с использованием настраиваемой архитектуры CNN, что привело к более ограниченной и менее эффективной производительности.
+            </p>
+            <p>Вы можете протестировать эти модели в реальном времени, загрузив изображение любой еды или животного.</p>
+        </section>
+        <section class="mb-4">
+            <div class="card-container">
+                <div class="card" id="tarjeta-1">
+                    <img id="preview1" src="#" alt="Tu imagen" style="max-width: 300px; border-radius: 10px;" class="mb-3">
+                    <div class="card-content">
+                        <h3>Модель 1: Классификация продуктов питания — неконтролируемое обучение</h3>
+                        <p>Загрузите изображение еды, чтобы классифицировать его (гамбургеры, пицца, хот-доги):</p>
+                        <br>
+                        <form id="upload-form" enctype="multipart/form-data">
+                            <br>
+                            <div class="mb-3">
+                                <input class="form-control" type="file" id="imageInputComida" name="file" accept="image/*">
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="clasificarImagnes()">Классифицировать изображение</button>
+                        </form>
+                        <div id="resultado-ia1" class="mt-4 text-center" style="display:none;">
+                            <h4 id="prediction-text1" class="text-success"></h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" id="tarjeta-2">
+                    <img id="preview2" src="#" alt="Tu imagen" style="max-width: 300px; border-radius: 10px;" class="mb-3">
+                    <div class="card-content">
+                        <h3>Модель 2: Классификация продуктов питания — контролируемое обучение</h3>
+                        <p>Загрузите изображение еды, чтобы классифицировать его (гамбургеры, пицца, хот-доги):</p>
+                        <br>
+                        <form id="upload-form" enctype="multipart/form-data">
+                            <br>
+                            <div class="mb-3">
+                                <input class="form-control" type="file" id="imageInputComida2" name="file" accept="image/*">
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="clasificarImagnes()">Классифицировать изображение</button>
+                        </form>
+                        <div id="resultado-ia2" class="mt-4 text-center" style="display:none;">
+                            <h4 id="prediction-text2" class="text-success"></h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" id="tarjeta-3">
+                    <img id="preview3" src="#" alt="Tu imagen" style="max-width: 300px; border-radius: 10px;" class="mb-3">
+                    <div class="card-content">
+                        <h3>Модель 3: Классификация животных с помощью CNN в режиме контролируемого обучения</h3>
+                        <p>Загрузите изображение животного, чтобы классифицировать его (бабуины или жирафы):</p>
+                        <br>
+                        <form id="upload-form" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <input class="form-control" type="file" id="imageInputAnimales" name="file" accept="image/*">
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="clasificarImagnes()">Классифицировать изображение</button>
+                        </form>
+                        <div id="resultado-ia3" class="mt-4 text-center" style="display:none;">
+                            <h4 id="prediction-text3" class="text-success"></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% else %}
+    <div class="container mt-4">
+        <section id="sobre-mi" class="mb-4">
+            <h2>Artificial Intelligence Projects</h2>
+            <p> 
+                Below are some of my projects related to artificial intelligence:
+            </p>
+        </section>
+        
+        <section id="sobre-mi" class="mb-4">
+            <h2>Image Classification Models</h2>
+            <p> 
+                I have developed three image classification models using machine learning techniques, convolutional neural networks (CNNs), and transfer learning (MobileNetV2). These models are capable of identifying and classifying objects in images with high accuracy.
+            </p>
+            <list>
+                <li><p><b>Model 1:</b> Image classification of food using unsupervised learning technique, classifying 3 categories: Burgers, Pizza, and Hot Dogs</p></li>
+                <li><p><b>Model 2:</b> Image classification of food using supervised learning technique, classifying 3 categories: Burgers, Pizza, and Hot Dogs</p></li>
+                <li><p><b>Model 3:</b> Image classification of animals using supervised learning technique, classifying 2 categories: Baboons and Giraffes</p></li>
+            </list>
+            <br>
+            <p>
+                These models have been trained using supervised and unsupervised learning techniques, which involve training a model using labeled data (supervised) or unlabeled data (unsupervised) so that the model learns to identify patterns and make predictions.
+            </p>
+
+            <p>
+                The first two models used the transfer learning technique with MobileNetV2, which allowed them to achieve high accuracy with reduced training time. The third model was trained from scratch using a custom CNN architecture, resulting in more limited and less effective performance.
+            </p>
+            <p>You can test these models in real-time by uploading an image of any food or animal.</p>
+        </section>
+        <section class="mb-4">
+            <div class="card-container">
+                <div class="card" id="tarjeta-1">
+                    <img id="preview1" src="#" alt="Tu imagen" style="max-width: 300px; border-radius: 10px;" class="mb-3">
+                    <div class="card-content">
+                        <h3>Model 1: Image Classification of Food - Unsupervised Learning</h3>
+                        <p>Upload an image of food to classify it (Burgers, Pizza, Hot Dogs):</p>
+                        <br>
+                        <form id="upload-form" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <input class="form-control" type="file" id="imageInputComida" name="file" accept="image/*">
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="clasificarImagnes()">Classify Image</button>
+                        </form>
+                        <div id="resultado-ia1" class="mt-4 text-center" style="display:none;">
+                            <h4 id="prediction-text1" class="text-success"></h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" id="tarjeta-2">
+                    <img id="preview2" src="#" alt="Tu imagen" style="max-width: 300px; border-radius: 10px;" class="mb-3">
+                    <div class="card-content">
+                        <h3>Model 2: Image Classification of Food - Supervised Learning</h3>
+                        <p>Upload an image of food to classify it (Burgers, Pizza, Hot Dogs):</p>
+                        <br>
+                        <form id="upload-form" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <input class="form-control" type="file" id="imageInputComida2" name="file" accept="image/*">
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="clasificarImagnes()">Classify Image</button>
+                        </form>
+                        <div id="resultado-ia2" class="mt-4 text-center" style="display:none;">
+                            <h4 id="prediction-text2" class="text-success"></h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" id="tarjeta-3">
+                    <img id="preview3" src="#" alt="Tu imagen" style="max-width: 300px; border-radius: 10px;" class="mb-3">
+                    <div class="card-content">
+                        <h3>Model 3: Image Classification of Animals - Supervised Learning</h3>
+                        <p>Upload an image of an animal to classify it (Monkeys or Giraffes):</p>
+                        <br>
+                        <form id="upload-form" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <input class="form-control" type="file" id="imageInputAnimales" name="file" accept="image/*">
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="clasificarImagnes()">Classify Image</button>
+                        </form>
+                        <div id="resultado-ia3" class="mt-4 text-center" style="display:none;">
+                            <h4 id="prediction-text3" class="text-success"></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endif %}
+<script src="{{ url_for('static', filename='JS/sendImagen.js') }}"></script>
+{% endblock %}

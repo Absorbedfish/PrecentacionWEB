@@ -1,0 +1,97 @@
+{% extends './layout.html' %}
+
+{% block title %}Hacking Etico{% endblock %}
+
+{% block content %}
+
+<div class="card-container">
+    {% if lang == "es" %}
+
+        <div class="card" id="tarjeta-1">
+            <img src="{{ url_for('static', filename='img/virtualbox.jpg') }}">
+            <div class="card-content">
+                <h3>Maquina Virtual</h3>
+                <br>
+                <p>Utilizacion de maquinas virtuales para mayor seguridad</p>
+                <br>
+            </div>
+        </div>
+        <div class="card" id="tarjeta-2">
+            <img src="{{ url_for('static', filename='img/Kali.jpg') }}">
+            <div class="card-content">
+                <h3>Linux/Kali</h3>
+                <br>
+                <p>conociemntos de kali linux solidos para uso cotidiano y pruebas de hacking</p>
+            </div>
+        </div>
+        <div class="card" id="tarjeta-3">
+            <img src="{{ url_for('static', filename='img/Tools.jpeg') }}" alt="Descripción de la imagen">
+            <div class="card-content">
+                <h3>Uso de herramientas conocidas</h3>
+                <p>Uso de herrmenitas conocidas como nmap, hydra, burpsuite, metasploit etc... Para cualquier tipo de tarea</p>
+            </div>
+        </div>
+    
+    {% elif lang == "ru" %}
+
+        <div class="card" id="tarjeta-1">
+            <img src="{{ url_for('static', filename='img/virtualbox.jpg') }}">
+            <div class="card-content">
+                <h3>Виртуальная машина</h3>
+                <br>
+                <br>
+                <p>Использование виртуальных машин для повышения безопасности</p>
+                <br>
+            </div>
+        </div>
+        <div class="card" id="tarjeta-2">
+            <img src="{{ url_for('static', filename='img/Kali.jpg') }}">
+            <div class="card-content">
+                <h3>Linux/Kali</h3>
+                <br>
+                <br>
+                <p>Знание Kali Linux для повседневного использования и тестов на взлом</p>
+                <br>
+            </div>
+        </div>
+        <div class="card" id="tarjeta-3">
+            <img src="{{ url_for('static', filename='img/Tools.jpeg') }}" alt="Descripción de la imagen">
+            <div class="card-content">
+                <h3>Использование знакомых инструментов</h3>
+                <p>Использование знакомых инструментов, таких как nmap, hydra, burpsuite, metasploit и т. д. для любых задач</p>
+            </div>
+        </div>
+
+    {% else %}
+
+        <div class="card" id="tarjeta-1">
+            <img src="{{ url_for('static', filename='img/virtualbox.jpg') }}">
+            <div class="card-content">
+                <h3>Virtual Machine</h3>
+                <br>
+                <p>Using Virtual Machines for Enhanced Security</p>
+                <br>
+            </div>
+        </div>
+        <div class="card" id="tarjeta-2">
+            <img src="{{ url_for('static', filename='img/Kali.jpg') }}">
+            <div class="card-content">
+                <h3>Linux/Kali</h3>
+                <br>
+                <p>Proficiency in Kali Linux for daily use and hacking tests</p>
+                <br>
+            </div>
+        </div>
+        <div class="card" id="tarjeta-3">
+            <img src="{{ url_for('static', filename='img/Tools.jpeg') }}" alt="Descripción de la imagen">
+            <div class="card-content">
+                <h3>Use of familiar tools</h3>
+                <br>
+                <p>Proficiency in using familiar tools like nmap, hydra, burpsuite, metasploit etc... for any type of task</p>
+            </div>
+        </div>
+
+    {% endif %}
+</div>
+    
+{% endblock %}
